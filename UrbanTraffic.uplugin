@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "UrbanTraffic",
+	"Description": "A lightweight framework for open-world style games.",
+	"Category": "Gameplay",
+	"CreatedBy": "Thinh Pham",
+	"CreatedByURL": "https://github.com/mrlordkaj",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "UrbanTraffic",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
