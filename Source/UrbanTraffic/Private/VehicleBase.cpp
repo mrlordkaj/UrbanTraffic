@@ -66,6 +66,7 @@ AVehicleBase::AVehicleBase() {
 	// setup engine sound
 	EngineSound = CreateDefaultSubobject<UAudioComponent>(TEXT("EngineSound"));
 	EngineSound->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	EngineSound->bAutoActivate = false;
 
 	// setup movement component
 	UWheeledVehicleMovementComponent* movement = GetVehicleMovement();
