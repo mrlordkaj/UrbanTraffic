@@ -52,10 +52,9 @@ void ACharacterBase::Tick(float DeltaTime)
 void ACharacterBase::SetupPlayerInputComponent(UInputComponent* input)
 {
 	Super::SetupPlayerInputComponent(input);
-	input->BindAction(IA_INTERACTIVE, IE_Pressed, this, &ACharacterBase::AttachNearestVehicle);
 	// setup input component for spectator
-	UActorComponent* spectator = GetComponentByClass(UPawnSpectatorComponent::StaticClass());
-	if (spectator) {
+	UActorComponent* spec = GetComponentByClass(UPawnSpectatorComponent::StaticClass());
+	if (spec) {
 		input->BindAxis(IA_CAMERA_UP);
 		input->BindAxis(IA_CAMERA_RIGHT);
 		input->BindAxis(IA_CAMERA_ZOOM);

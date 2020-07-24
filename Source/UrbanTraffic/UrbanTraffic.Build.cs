@@ -51,18 +51,6 @@ public class UrbanTraffic : ModuleRules
 			}
 			);
 
-        PublicDefinitions.Add("IA_MOVE_FORWARD=\"MoveForward\"");
-        PublicDefinitions.Add("IA_MOVE_RIGHT=\"MoveRight\"");
-        PublicDefinitions.Add("IA_MOVE_BRAKE=\"Brake\"");
-
-        PublicDefinitions.Add("IA_INTERACTIVE=\"Interactive\"");
-        PublicDefinitions.Add("IA_AUTONOMOUS=\"Autonomous\"");
-        PublicDefinitions.Add("IA_FLASHLIGHT=\"Flashlight\"");
-
-        PublicDefinitions.Add("IA_SIDELIGHT_L=\"SideLeft\"");
-        PublicDefinitions.Add("IA_SIDELIGHT_R=\"SideRight\"");
-        PublicDefinitions.Add("IA_SIDELIGHT_O=\"SideNone\"");
-
         PublicDefinitions.Add("IA_CAMERA_SWITCH=\"SwitchCamera\"");
         PublicDefinitions.Add("IA_CAMERA_ZOOM=\"ZoomCamera\"");
         PublicDefinitions.Add("IA_CAMERA_UP=\"LookUp\"");

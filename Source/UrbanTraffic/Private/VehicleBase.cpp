@@ -392,16 +392,6 @@ bool AVehicleBase::isAutoMode() {
 
 void AVehicleBase::SetupPlayerInputComponent(UInputComponent* input) {
 	Super::SetupPlayerInputComponent(input);
-	input->BindAction(IA_INTERACTIVE, IE_Pressed, MyDriver, &ACharacterBase::BeginGetOutVehicle);
-	input->BindAction(IA_AUTONOMOUS, IE_Pressed, this, &AVehicleBase::ToggleAutonomous);
-	input->BindAction(IA_FLASHLIGHT, IE_Pressed, this, &AVehicleBase::ToggleLight);
-	input->BindAction<FHandBrakeDelegate>(IA_MOVE_BRAKE, IE_Pressed, this, &AVehicleBase::SetHandBrake, true);
-	input->BindAction<FHandBrakeDelegate>(IA_MOVE_BRAKE, IE_Released, this, &AVehicleBase::SetHandBrake, false);
-	input->BindAction<FSideLightDelegate>(IA_SIDELIGHT_L, IE_Pressed, this, &AVehicleBase::SetSideLightState, SideLightState::Left);
-	input->BindAction<FSideLightDelegate>(IA_SIDELIGHT_R, IE_Pressed, this, &AVehicleBase::SetSideLightState, SideLightState::Right);
-	input->BindAction<FSideLightDelegate>(IA_SIDELIGHT_O, IE_Pressed, this, &AVehicleBase::SetSideLightState, SideLightState::None);
-	input->BindAxis(IA_MOVE_FORWARD, this, &AVehicleBase::SetThrottle);
-	input->BindAxis(IA_MOVE_RIGHT, this, &AVehicleBase::SetSteering);
 	// setup input component for spectator
 	UActorComponent* spec = GetComponentByClass(UPawnSpectatorComponent::StaticClass());
 	if (spec) {
