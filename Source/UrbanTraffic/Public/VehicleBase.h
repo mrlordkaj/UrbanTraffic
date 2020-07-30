@@ -87,9 +87,6 @@ class URBANTRAFFIC_API AVehicleBase : public AWheeledVehicle
 {
 	GENERATED_BODY()
 
-	DECLARE_DELEGATE_OneParam(FHandBrakeDelegate, bool);
-	DECLARE_DELEGATE_OneParam(FSideLightDelegate, SideLightState);
-
 public:
 	AVehicleBase();
 	virtual void PostInitializeComponents() override;
